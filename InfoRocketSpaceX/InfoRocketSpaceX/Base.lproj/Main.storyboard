@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HwB-VS-qBN">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="LabGrotesque-Thin.ttf">
+            <string>LabGrotesque-Thin</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainInfo" id="BYZ-38-t0r" customClass="ViewController" customModule="InfoRocketSpaceX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="54v-eP-qRT"/>
+                    <connections>
+                        <segue destination="GuJ-Ns-xtM" kind="show" identifier="goLaunch" id="duS-qa-InO"/>
+                        <segue destination="lj4-Ca-aGY" kind="showDetail" id="04x-1L-Nkg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1797" y="91"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="Iex-t9-MDA">
+            <objects>
+                <viewController storyboardIdentifier="Settings" id="lj4-Ca-aGY" customClass="SettingsVC" customModule="InfoRocketSpaceX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P8S-uD-wvY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="Tg0-7j-ZuQ">
+                                <rect key="frame" x="0.0" y="-4" width="414" height="56"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="17"/>
+                                    <color key="textColor" red="0.98039215800000001" green="1" blue="0.99607843159999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Настройки" id="79x-rs-6dr">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="IqY-0k-09R">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="8LK-tn-gpx">
+                                                <rect key="frame" x="296.5" y="10" width="97.5" height="36"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Закрыть">
+                                                    <fontDescription key="titleFontDescription" name="LabGrotesque-Medium" family="Lab Grotesque" pointSize="18"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="close:" destination="lj4-Ca-aGY" eventType="touchUpInside" id="S0b-0D-vvy"/>
+                                                </connections>
+                                            </button>
+                                            <connections>
+                                                <action selector="close:" destination="lj4-Ca-aGY" id="WlZ-pX-Lin"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <navigationBarAppearance key="standardAppearance">
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <textAttributes key="titleTextAttributes">
+                                        <fontDescription key="fontDescription" name="LabGrotesque-Regular" family="Lab Grotesque" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </textAttributes>
+                                </navigationBarAppearance>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="equalSpacing" spacing="20" id="Ch5-GI-Gwk">
+                                <rect key="frame" x="23" y="100" width="369" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="lSr-3a-REx">
+                                        <rect key="frame" x="0.0" y="0.0" width="369" height="30.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Высота" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sk-6z-Qca">
+                                                <rect key="frame" x="0.0" y="3.5" width="64" height="24"/>
+                                                <fontDescription key="fontDescription" name="LabGrotesque-Thin" family="Lab Grotesque" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Xae-BQ-hKH">
+                                                <rect key="frame" x="259" y="0.0" width="110" height="31.5"/>
+                                                <color key="backgroundColor" systemColor="separatorColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="110" id="zWL-lc-cqN"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="m"/>
+                                                    <segment title="ft"/>
+                                                </segments>
+                                                <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="heightMorFt:" destination="lj4-Ca-aGY" eventType="valueChanged" id="wFF-xR-IiB"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="sLA-ip-2Mf">
+                                        <rect key="frame" x="0.0" y="61.5" width="369" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Диаметр" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ezr-ys-g03">
+                                                <rect key="frame" x="0.0" y="3.5" width="77.5" height="24"/>
+                                                <fontDescription key="fontDescription" name="LabGrotesque-Thin" family="Lab Grotesque" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jTS-wm-aQg">
+                                                <rect key="frame" x="259" y="0.0" width="110" height="32"/>
+                                                <color key="backgroundColor" systemColor="separatorColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="110" id="orM-6B-0R0"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="m"/>
+                                                    <segment title="ft"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="diameter:" destination="lj4-Ca-aGY" eventType="valueChanged" id="yIY-qC-BNL"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="rKp-bR-NU8">
+                                        <rect key="frame" x="0.0" y="123.5" width="369" height="30.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Масса" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1x-d7-6hP">
+                                                <rect key="frame" x="0.0" y="3.5" width="56" height="24"/>
+                                                <fontDescription key="fontDescription" name="LabGrotesque-Thin" family="Lab Grotesque" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="gkc-KG-IwB">
+                                                <rect key="frame" x="259" y="0.0" width="110" height="31.5"/>
+                                                <color key="backgroundColor" systemColor="separatorColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="110" id="Z0y-Wi-5M2"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="kg"/>
+                                                    <segment title="lb"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="weight:" destination="lj4-Ca-aGY" eventType="valueChanged" id="oSu-DG-Lcg"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="DH3-Rh-xNb">
+                                        <rect key="frame" x="0.0" y="185" width="369" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Полезная нагрузка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tvu-CE-rh2">
+                                                <rect key="frame" x="0.0" y="3.5" width="167" height="24"/>
+                                                <fontDescription key="fontDescription" name="LabGrotesque-Thin" family="Lab Grotesque" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="l6N-HU-Bts">
+                                                <rect key="frame" x="259" y="0.0" width="110" height="32"/>
+                                                <color key="backgroundColor" systemColor="separatorColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="110" id="YZi-ZM-12J"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="kg"/>
+                                                    <segment title="lb"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="load:" destination="lj4-Ca-aGY" eventType="valueChanged" id="Atb-5S-GhS"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="rKp-bR-NU8" firstAttribute="top" secondItem="Ch5-GI-Gwk" secondAttribute="top" constant="123.5" id="Wek-jU-wgh"/>
+                                    <constraint firstItem="DH3-Rh-xNb" firstAttribute="top" secondItem="Ch5-GI-Gwk" secondAttribute="top" constant="185" id="b8o-zY-cOy"/>
+                                    <constraint firstItem="rKp-bR-NU8" firstAttribute="top" secondItem="sLA-ip-2Mf" secondAttribute="bottom" constant="31" id="qLw-xC-HIs"/>
+                                    <constraint firstItem="sLA-ip-2Mf" firstAttribute="top" secondItem="Ch5-GI-Gwk" secondAttribute="top" constant="61.5" id="x2o-xY-3qD"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TEY-Pd-8XH"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="QKg-gE-7K6"/>
+                    <connections>
+                        <outlet property="diameterMorFt" destination="jTS-wm-aQg" id="RTo-Jt-rfa"/>
+                        <outlet property="heightMorFt" destination="Xae-BQ-hKH" id="TSV-CH-heJ"/>
+                        <outlet property="loadKgOrLb" destination="l6N-HU-Bts" id="fTb-7n-VZm"/>
+                        <outlet property="weightKgOrLb" destination="gkc-KG-IwB" id="c6Z-pv-md9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jW3-Ee-TgV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="bordered" selectedSegmentIndex="0" id="7rS-sf-sga">
+                    <rect key="frame" x="0.0" y="-1" width="59" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" systemColor="secondaryLabelColor"/>
+                    <segments>
+                        <segment title="m"/>
+                        <segment title="ft"/>
+                    </segments>
+                    <color key="tintColor" systemColor="tintColor"/>
+                    <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </segmentedControl>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="202" id="HbW-yl-bDd">
+                    <rect key="frame" x="0.0" y="0.0" width="343.5" height="35"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fmI-E7-nQB">
+                            <rect key="frame" x="0.0" y="0.0" width="41.5" height="35"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mxA-ky-yYl">
+                            <rect key="frame" x="243.5" y="0.0" width="100" height="36"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="25v-ie-s03"/>
+                                <constraint firstAttribute="width" constant="100" id="2Pl-0Q-HxJ"/>
+                            </constraints>
+                            <segments>
+                                <segment title="m"/>
+                                <segment title="ft"/>
+                            </segments>
+                        </segmentedControl>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="9Ag-B0-Ydh"/>
+                </stackView>
+            </objects>
+            <point key="canvasLocation" x="2797.1014492753625" y="460.71428571428567"/>
+        </scene>
+        <!--Launch-->
+        <scene sceneID="kpl-e4-0fq">
+            <objects>
+                <viewController storyboardIdentifier="Launch" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GuJ-Ns-xtM" customClass="LaunchRocketVC" customModule="InfoRocketSpaceX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FGi-Hj-GdH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="JBW-xx-y2n"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Launch" id="Scj-Ti-sxr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gKH-qc-jM2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2797.1014492753625" y="-200.22321428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NxF-Hu-wGP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HwB-VS-qBN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ul2-hM-Jx9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.98039215800000001" green="1" blue="0.99607843159999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0th-sO-UAf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5CO-Mu-m4A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="83.705357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
