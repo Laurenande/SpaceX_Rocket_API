@@ -1,16 +1,16 @@
 PODS:
-  - Alamofire (5.6.1)
+  - SPStorkController (1.8.5)
 
 DEPENDENCIES:
-  - Alamofire
+  - SPStorkController
 
 SPEC REPOS:
   trunk:
-    - Alamofire
+    - SPStorkController
 
 SPEC CHECKSUMS:
-  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  SPStorkController: 68966ed3134de2be2a8bbd1475c7e81f3f7d01ee
 
-PODFILE CHECKSUM: 4d36e2974bcb1071966b28902f6a746f27248e6a
+PODFILE CHECKSUM: 723536959320b654f623c0d9732b09eadabdccc9
 
 COCOAPODS: 1.11.3

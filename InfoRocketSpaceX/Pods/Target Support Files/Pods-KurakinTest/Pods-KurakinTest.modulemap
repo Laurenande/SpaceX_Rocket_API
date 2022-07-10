@@ -1,0 +1,6 @@
+framework module Pods_KurakinTest {
+  umbrella header "Pods-KurakinTest-umbrella.h"
+
+  export *
+  module * { export * }
+}
